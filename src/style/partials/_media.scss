@@ -1,0 +1,479 @@
+@media (max-width: 1200px) {
+  // header
+  .header {
+    &__item {
+      .address {
+        font-size: 16px;
+      }
+
+      .phone {
+        font-size: 16px;
+      }
+
+      &--callback {
+        a {
+          padding: 14px 25px;
+          font-size: 16px;
+        }
+      }
+    }
+
+  }
+
+  // услуги
+  .services {
+    &__item {
+      flex-basis: calc(100% / 3);
+      max-width: 300px;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    &__item-image {
+      padding: 0 10px;
+      height: 250px;
+    }
+
+    &__item-content {
+      padding: 20px 10px;
+    }
+
+    &__item-list__item {
+      padding: 15px 10px;
+    }
+  }
+
+  // как мы работаем
+  .how {
+    &__item {
+      &:after {
+        display: none;
+      }
+
+
+    }
+  }
+
+  // footer
+  .footer {
+    .container {
+      .map {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    height: 73px;
+    &__wrap {
+      &.fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 12px 15px;
+        z-index: 3;
+        animation: slide-in 0.3s ease-out;
+        background-color: $white;
+        border-bottom: 1px solid $dark;
+        .burger {
+          left: 15px;
+        }
+      }
+    }
+    &__content {
+      justify-content: flex-end;
+    }
+
+    .logo {
+      margin-left: 40px;
+    }
+
+    &__item {
+      &.header__item--address {
+        display: none;
+      }
+
+      &.header__item--phone {
+        display: none;
+      }
+
+      &--callback {
+        a {
+          padding: 14px 25px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .burger {
+      display: block;
+    }
+  }
+
+
+  //intro
+  .intro {
+    &__wrap {
+      position: relative;
+      padding: 120px 0;
+    }
+
+    &__title {
+      font-size: 40px;
+    }
+
+  }
+
+  // меню
+  .menu {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 74px;
+    width: 100%;
+    height: calc(100vh - 74px);
+    padding: 15px;
+    background-color: $white;
+    z-index: 3;
+    overflow: auto;
+    /*transform: translateX(-100%);*/
+    /*transition: 0.5s ease-in;*/
+    .menu__list {
+      color: $dark;
+      display: block;
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+
+    .menu__item {
+      margin-right: 0;
+      margin-bottom: 20px;
+      &:nth-last-of-type(1) {
+        margin-bottom: 0;
+      }
+    }
+
+    .menu__info {
+      display: block;
+    }
+
+    &.show {
+      /*width: 100%;
+      left: 0;
+      animation: slideInLeft 0.5s ease-out;
+      z-index: 3;*/
+      .menu__item {
+        opacity: 0;
+        transform: translateY(-50px);
+        animation: fadeIn 1s forwards ease-out;
+
+        &:nth-of-type(1) {
+          animation-delay: 0.1s;
+        }
+
+        &:nth-of-type(2) {
+          animation-delay: 0.3s;
+        }
+
+        &:nth-of-type(3) {
+          animation-delay: 0.5s;
+        }
+
+        &:nth-last-of-type(1) {
+          animation-delay: 0.7s;
+        }
+      }
+
+      .menu__info {
+        opacity: 0;
+        transform: translateY(-50px);
+        animation: fadeIn 1s forwards ease-out;
+        animation-delay: 0.9s;
+      }
+    }
+  }
+
+  // услуги
+  .services {
+
+    &__row {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    &__item {
+      flex-basis: 100%;
+      width: 100%;
+      max-width: 381px;
+      margin: 0 15px 30px;
+      &:nth-last-of-type(1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // почему выбирают нас
+  .why {
+    &__wrap {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+
+    &__content {
+      width: 100%;
+    }
+  }
+
+  // как мы работаем
+  .how {
+    &__wrap {
+      flex-wrap: wrap;
+    }
+    &__content {
+      order: 1;
+      padding-top: 0;
+      margin-bottom: 50px;
+    }
+
+    &__row {
+      margin-top: 50px;
+    }
+  }
+
+  //форма
+  .feedback {
+    order: 2;
+    margin: 0 auto;
+    min-width: auto;
+  }
+
+
+  // footer
+  .footer {
+    .container {
+      .map {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+    &__item {
+      &--callback {
+        a {
+          padding: 14px 25px;
+          font-size: 14px;
+        }
+      }
+    }
+
+  }
+
+  // меню
+  .menu {
+    top: 71px;
+    height: calc(100vh - 71px);
+  }
+
+  // услуги
+  .services {
+
+    &__item {
+      margin: 0 0 30px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 8px;
+  }
+
+  .block-title {
+    font-size: 26px;
+  }
+
+  .header {
+    height: 64px;
+    &__wrap {
+      height: 64px;
+      &.fixed {
+        padding: 12px 8px 11px;
+        height: 65px;
+        .burger {
+          left: 8px;
+        }
+      }
+    }
+
+    &__item {
+      &--callback {
+        a {
+          padding: 10px 15px;
+          font-size: 12px;
+        }
+      }
+    }
+
+  }
+
+  //intro
+  .intro {
+    .callback {
+      padding: 20px 40px;
+    }
+  }
+
+  // меню
+  .menu {
+    top: 65px;
+    height: calc(100vh - 65px);
+    padding: 15px 8px;
+  }
+
+  // услуги
+  .services {
+
+    &__item {
+      margin: 0 0 30px;
+    }
+
+    &__more {
+      margin-top: 45px;
+
+      a {
+        font-size: 16px;
+        padding: 20px 40px;
+      }
+    }
+  }
+
+  // как мы работаем
+  .how {
+
+    &__row {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-basis: 100%;
+      margin-bottom: 50px;
+      &:nth-last-of-type(1) {
+        margin-bottom: 0;
+      }
+
+      .step {
+        left: 0px;
+        right: 75px;
+        top: 3px;
+        margin: auto;
+      }
+
+      .image {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  //форма
+  .feedback {
+    order: 2;
+    margin: 0 auto;
+    min-width: auto;
+    &__submit {
+      font-size: 16px;
+      padding: 20px 15px;
+    }
+  }
+
+
+  // footer
+  .footer {
+    &__content {
+      flex-wrap: wrap;
+    }
+
+    &__contacts {
+      flex-basis: 100%;
+      min-width: auto;
+    }
+
+    &__menu {
+      margin-top: 50px;
+    }
+  }
+}
+
+
+//для эффектов только на дэсктопе
+@media (min-width: 992px) {
+  // меню
+  .menu {
+    &__item {
+      opacity: 0;
+      transform: translateY(-50px);
+      animation: fadeIn 1s forwards ease-out;
+
+
+      &:nth-of-type(1) {
+        animation-delay: 2s;
+      }
+
+      &:nth-of-type(2) {
+        animation-delay: 2.2s;
+      }
+
+      &:nth-of-type(3) {
+        animation-delay: 2.4s;
+      }
+
+      &:nth-last-of-type(1) {
+        animation-delay: 2.6s;
+      }
+    }
+
+    &__link {
+      position: relative;
+
+      &:hover:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: $red;
+        animation: menuHover 0.5s forwards ease-in-out;
+      }
+    }
+  }
+
+  // как мы работаем
+  .how {
+    &__item {
+      .image {
+
+        img {
+          filter: grayscale(100%);
+          transition: 0.3s;
+        }
+
+        &:hover {
+          img {
+            filter: grayscale(0);
+
+          }
+        }
+      }
+    }
+  }
+}
